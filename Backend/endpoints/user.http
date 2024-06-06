@@ -1,0 +1,111 @@
+### Health check
+GET http://localhost:5000/health
+
+
+#-------------user---------
+
+### Add New Employee
+POST http://localhost:5000/api/users/addNewEmployee
+Content-Type: application/json
+
+{
+    "FirstName" : "Leah",
+    "LastName" : "Nyambu",
+    "Location" : "Nyeri",
+    "BirthDate" : "2000-05-10",
+    "Contact" : "0705621144",
+    "Gender" : "Male",
+    "admin" :true,
+    "PositionID" : 1,
+    "ScheduleID" : 1,
+    "Email" : "admin@gmail.com",
+    "Password" : "admin1",
+    "BankName" : "NCBA",
+    "BankBranch" : "Nyeri",
+    "AccountNumber" : "12354321",
+    "Bio" : "Meet From leah from Teach2Give"
+}
+
+### getting All users
+GET http://localhost:5000/api/users/getAllUsers
+
+### getting User By ID
+GET http://localhost:5000/api/users/getUserByID/4
+
+
+### getting User By Email
+GET http://localhost:5000/api/users/getNotFoundByEmail/gitiropeter4@gmail.com
+
+
+
+### login
+POST http://localhost:5000/api/users/login
+Content-Type: application/json
+
+{
+    "Email" : "leah@gmail.com",
+    "Password" : "leah111"
+}
+
+
+### Update Employee ---where id is.....
+PUT http://localhost:5000/api/users/UpdateEmployeeByID/12
+Content-Type: application/json
+
+{
+    "FirstName" : "Titus",
+    "LastName" : "Munyoki",
+    "Location" : "Nyeri",
+    "BirthDate" : "2000-05-10",
+    "Contact" : "0735621144",
+    "Gender" : "Male",
+    "admin" : 0,
+    "PositionID" : 1,
+    "ScheduleID" : 1,
+    "Email" : "pientopitelo@gmail.com",
+    "Password" : "password110",
+    "BankName" : "NCBA",
+    "BankBranch" : "Nyeri",
+    "AccountNumber" : "12354321",
+    "Bio" : "Meet Titus Munyoki from Moringa"
+}
+
+
+
+
+
+
+
+###delete employee
+DELETE http://localhost:5000/api/users/deleteEmployeeById/11
+
+
+
+
+
+
+### Update Employee ---where id is.....
+PUT http://localhost:5000/api/users/UpdateEmployeeByID/12
+Content-Type: application/json
+
+{
+    "FirstName" : "Titus",
+    "LastName" : "Munyoki",
+    "Location" : "Nyeri",
+    "BirthDate" : "2000-05-10",
+    "Contact" : "0735621144",
+    "Gender" : "Male",
+    "admin" : 0,
+    "PositionID" : 1,
+    "ScheduleID" : 1,
+    "PhotoURL" : "https://example.com/john.jpg",
+    "Email" : "peter.wambugu@teach2give.com",
+    "Password" : "password110",
+    "BankName" : "NCBA",
+    "BankBranch" : "Nyeri",
+    "AccountNumber" : "12354321",
+    "Bio" : "Meet Titus Munyoki from Moringa"
+}
+
+###
+http://localhost:5000/api/photos/users/${req.file.filename}

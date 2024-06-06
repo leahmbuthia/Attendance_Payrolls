@@ -1,0 +1,64 @@
+
+#-------------Attendance-----------
+
+### get all Attendance.
+GET http://localhost:8000/api/attendance/getAll
+
+### get Attendance By ID.
+GET http://localhost:8000/api/attendance/getattendanceByID/4
+
+
+### get Attendance By Employee ID.
+GET http://localhost:8000/api/attendance/getattendanceByEmpID/2
+
+
+
+### Delete Attendance .
+DELETE http://localhost:8000/api/attendance/deleteattendanceByID/43
+
+
+
+### Add New Attendance
+POST http://localhost:8000/api/attendance/AddAttendance
+Content-Type: application/json
+
+{
+    "EmployeeID": 3,
+    "ScheduleID": 1,
+    "TimeIn": "10:00:00"      
+}
+
+### Update Attendance by ID
+PUT http://localhost:8000/api/attendance/UpdateAttendanceByID/7
+Content-Type: application/json
+
+{
+    "EmployeeID": 2,
+    "Date": "2024-03-25T00:00:00.000Z",
+    "TimeOut": "1970-01-01T17:00:00.000Z"
+}
+
+
+
+
+###
+{
+    "EmployeeID": 2,
+    "Date": "2024-03-18",
+    "ScheduleID": 1,
+    "TimeIn": "08:00:00AM",
+    "TimeOut": "011:00:00AM",
+    "Hours": "10"
+}
+
+
+
+# {
+#     "EmployeeID": 2,
+#     "Date": "2024-03-18",
+#     "ScheduleID": 1,
+#     "TimeIn": "08:00:00AM",
+#     "TimeOut": "14:00:00.000Z",
+#     "Hours": "5"
+# }
+

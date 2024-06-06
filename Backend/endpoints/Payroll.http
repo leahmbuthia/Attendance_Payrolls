@@ -1,0 +1,45 @@
+
+#-------------Payrolls-----------
+
+### get all Payrolls.
+GET http://localhost:8000/api/payroll/getAll
+
+### get Payrolls By ID.
+GET http://localhost:8000/api/payroll/getpayrollByID/4
+
+
+### get Payrolls By Emp ID.
+GET http://localhost:8000/api/payroll/getpayrollByEmpID/2
+
+### Delete Payrolls .
+DELETE http://localhost:8000/api/payroll/deletepayrollByID/22
+
+
+### Add New payroll
+POST http://localhost:8000/api/payroll/addpayrollByID/1
+
+
+### Add New payroll
+POST http://localhost:8000/api/payroll/addpayroll
+Content-Type: application/json
+
+{
+    "EmployeeID" : 16
+}
+
+### Update payroll
+PUT http://localhost:8000/api/payroll/UpdatepayrollByID/33
+Content-Type: application/json
+
+{
+    "PayrollDate": "2024-01-29",
+    "EmployeeID": 2,
+    "GrossPay": 54000,
+    "TotalDeductions": 5000,
+    "NetPay": 49000
+}
+
+
+
+
+

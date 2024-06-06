@@ -1,0 +1,53 @@
+
+#-------------Overtime-----------
+
+### get all Overtime.
+GET http://localhost:8000/api/overtime/getAll
+
+
+### get Overtime By ID.
+GET http://localhost:8000/api/overtime/getovetimeByID/7
+
+
+
+### get Overtime By EmployeeID.
+GET http://localhost:8000/api/overtime/getovetimeByEmpID/1
+
+
+
+
+### Delete Overtime .
+DELETE http://localhost:8000/api/overtime/deleteOvetimeByID/7
+
+
+### aadd Overtime 
+#--------- Overtie should ! be add here rather On Attendance!!!!
+POST http://localhost:8000/api/overtime/addOvetime
+Content-Type: application/json
+
+{
+    "EmployeeID": 1,
+    "AttendanceID": 118,
+    "OvertimeHours": 5,
+    "OvertimeEarnings": 2000.00
+}
+
+
+### Update Overtime by Emp id
+PUT http://localhost:8000/api/overtime/updateOvetimeByEmpID/1
+Content-Type: application/json
+
+{
+    "AttendanceID": 118,
+    "OvertimeHours": 4,
+    "OvertimeEarnings": 2000.00
+}
+
+
+
+
+
+
+
+
+
